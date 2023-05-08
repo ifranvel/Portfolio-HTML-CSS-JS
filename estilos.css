@@ -1,0 +1,222 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+
+.foto{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+    filter: blur(1px);
+    user-select: none;
+}
+
+
+.subtitulo{
+    color: white;
+    font-family: Chakra;
+    text-align: center;
+    max-width: 900px;
+    display: block;
+    margin:  40px auto;
+}
+
+.subtituloBolder{
+    color: white;
+    font-family: ChakraBold;
+    text-align: center;
+    max-width: 900px;
+    display: block;
+    margin:  20px auto;
+}
+
+h1{
+    text-align: center;
+    font-family: "ChakraBold";
+    font-size: 65px;
+    margin: 0;
+    color: rgb(110, 243, 98);
+    animation-name: titulo_letras;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    user-select: none;
+}
+
+.containerImg{
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    padding: 30px 0 ;
+}
+
+.containerImg img{
+    width: 300px;
+    margin: 7px 10px;
+    border-radius: 10px;
+    filter: brightness(0.6) grayscale(0.4);
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.containerImg img:hover{
+    filter: brightness(1);
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+.containerflex{
+    display: flex;
+}
+
+.redes{
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.redes img{
+    width: 40px;
+    margin: 0 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.redes img:hover{
+    opacity: 1;
+}
+
+.proyecto{
+    margin: 50px auto;
+    background: linear-gradient(0deg, rgb(13, 13, 13,1), rgb(34, 34, 34));
+    box-shadow: 0px 0px 213px 25px rgba(2, 49, 2, 0.18);
+    max-width: 1000px;
+    max-height: 2000px;
+    padding: 20px;
+    border: 2px rgb(65, 65, 65) solid;
+    
+}
+
+.proyecto hr{
+    width: 950px;
+}
+
+.proyecto h3{
+    color: white;
+    font-family: ChakraBold;
+    font-size: 35px;
+    margin: 0;
+}
+
+.year{
+    color: white;
+    font-family: Chakra;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+body hr{
+    border-color: grey;
+    width: 500px;
+}
+
+.proyecto p{
+    color: rgb(173, 173, 173);
+    font-family: Chakra;
+    margin: 20px 10px;
+    text-align: justify;
+}
+
+.proyecto .containerflex img{
+    width: 50px;
+    height: 50px;
+    margin: auto 10px;
+}
+
+.proyecto iframe{
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.logoProyecto{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.exitBoton{
+    position: absolute;
+    top: 0;
+    right: inherit;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 30px; 
+    height: 30px;  
+    color: white; 
+    font-size: 20px; 
+    float: right;
+    margin: 20px 40px; 
+    font-family: Arial; 
+    user-select: none; 
+    cursor: pointer; 
+    border: 3px white solid;
+    transition: 0.1s;
+    background-color: black;
+}
+
+.exitBoton:hover{
+    box-shadow: 0 0 15px rgb(136, 255, 89); 
+}
+
+#fullpage {
+    display: none;
+    position:  fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: 73%;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.767);
+    justify-content: center;
+    align-items: center;
+}
+
+#fullpage img{
+    max-height: 80%;
+}
+
+
+/*Fuentes*/
+@font-face {
+    font-family: 'ChakraBold';
+    src:  url(Fuentes/ChakraPetch-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Chakra';
+    src:  url(Fuentes/ChakraPetch-Regular.ttf);
+}
+
+
+/*Animaciones*/
+
+@keyframes titulo_letras{
+    0% {
+        text-shadow: 0 0  5px #31f300, 0 0 5px #059200;
+    }
+
+    50%{
+        text-shadow: 0 0  14px #31f300, 0 0 5px #059200;
+    }
+
+    100%{
+        text-shadow: 0 0  5px #31f300, 0 0 5px #059200;
+    }
+}

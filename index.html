@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>PortFolio | Ismael Franco Velasco</title>
+</head>
+<body>
+    <!--Bienvenida-->>
+    <div style="margin-top: 80px;">
+        <h1>Bienvenido/a a mi<br>PORTFOLIO</h1>
+    </div>
+    <p class="subtitulo">¡Hola! Soy Ismael Franco Velasco y en esta página mostraré todos los proyectos que he realizado hasta día de hoy, tanto videojuegos como aplicaciones multiplataforma/web.</p>
+    <p class="subtituloBolder">Más sobre mí en:</p>
+    <div class="containerflex redes">
+        <a href="https://www.linkedin.com/in/ismael-franco-velasco-2804071b9">
+            <img src="imagenes/linkedin.png" />
+        </a>
+        <a href="https://github.com/ifranvel">
+            <img src="imagenes/github.png" />
+        </a>
+    </div>
+
+    <p class="subtitulo" style="color: rgb(76, 228, 89);">Última modificación: 10/02/2023</p>
+    <!--Proyectos-->
+    
+    <div>
+        <h2 class="year">2023</h2>
+        <hr/>
+    </div>
+
+    <div class="proyecto">
+        <div class="containerflex">
+            <img src="imagenes/unity.webp" title="Java"/>
+            <h3>Isma Jones - En desarrollo</h3>
+        </div>
+        <p>Juego 2D en desarrollo. Práctica para aprender a manejar el motor gráfico, aunque yo ya apredí a manjear Unity de manera autosuficiente. El juego es una parodia a Indiana Jones. Ismael necesita dinero para comprarse la Switch, por lo que se dispone a buscar un tesoro que le permitiría comprarsela. En el transcurso, Isma deberá evitar las trampas que puedan haber y tratar de no morir por los enemigos.</p>
+        <div class="containerImg">
+            <img src="imagenes/ismajones/menu.gif"/>
+        </div>
+    </div>
+
+    <div class="proyecto">
+        <div class="containerflex">
+            <img src="imagenes/javafx.png" title="Java"/>
+            <h3>HBO Menox</h3>
+        </div>
+        <p>Se tenía que crear una buena interfaz con JavaFX. La temática era libre por lo que mi compañero de equipo Sergio y yo tomamos como refencia la página de HBO Max e hicimos HBO Menox. Después de esto, además de tener futuro en el desarrollo de aplicaciones, también lo tenemos en el circo.</p>
+        <div class="containerImg">
+            <img src="imagenes/hbomenox/1.PNG"/>
+            <img src="imagenes/hbomenox/2.PNG"/>
+            <img src="imagenes/hbomenox/3.PNG"/>
+        </div>
+    </div>
+
+    <div class="proyecto">
+        <div class="containerflex">
+            <img src="imagenes/java.png" title="Java"/>
+            <h3>Penguin Club</h3>
+        </div>
+        <p>Tuvimos varias reuniones con los clientes y nos pidieron una mini aplicación para apadrinar pingüinos. La aplicación debía tener conexión con base de datos (MySQL).</p>
+        <div class="containerImg">
+            <img src="imagenes/penguinclub/1.PNG"/>
+            <img src="imagenes/penguinclub/2.PNG"/>
+            <img src="imagenes/penguinclub/3.PNG"/>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="year">2022</h2>
+        <hr/>
+    </div>
+    
+    <div class="proyecto">
+        <div class="containerflex">
+            <img src="imagenes/android.png" title="Java"/>
+            <h3>Spotify 2</h3>
+        </div>
+        <p>Se pedía desarrollar una aplicación móvil que utilizase una base de datos local SQLite y cumpliese el CRUD con Android Studio. Decidí crear mi propio reproductor de música, en el que puedo añadir cualquier canción poniendo el nombre y la URL. Ahora disfruto escuchando música sin ser interrumpido por anuncios.</p>
+        <div class="containerImg">
+            <img src="imagenes/spotify2/1.PNG"/>
+            <img src="imagenes/spotify2/2.PNG"/>
+            <img src="imagenes/spotify2/3.PNG"/>
+        </div>
+    </div>
+    
+    <div class="proyecto">
+        <div class="containerflex">
+            <img src="imagenes/java.png" title="Java"/>
+            <h3>Abe's Inferno</h3>
+        </div>
+        <p>Videojuego 2D desarrollado con Java. Fue la primera práctica en la que debiamos usar interfaz gráfica y se pedía un juego de mesa fácil y sencillo, pero mi compañero y yo decidimos investigar más para poder conseguir un 2D, conociendo los hilos, los eventos y los listeners. Con Abe's Inferno, Daniel Boza García y yo fuimos los ganadores del concurso de los SorayaGames (Soraya es mi profesora).</p>
+        <div class="containerImg">
+            <img src="imagenes/abeinferno/1.PNG"/>
+            <img src="imagenes/abeinferno/2.PNG"/>
+            <img src="imagenes/abeinferno/3.PNG"/>
+            <img src="imagenes/abeinferno/4.PNG"/>
+            <img src="imagenes/abeinferno/5.PNG"/>
+        </div>
+        <hr>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/U2a1qCJBnRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <img src="imagenes/foto.png" class="foto"/>
+
+    <div id="fullpage" onclick="this.style.display='none';">
+        <a class="exitBoton">X</a>
+        <img id="imagen"/>
+    </div>
+
+    <!--Script JavaScript para abrir las imágenes-->
+    <script>
+        const imgs = document.querySelectorAll('.containerImg img');
+        const fullPage = document.querySelector('#fullpage');
+        let imagen = document.querySelector("#imagen");
+        imgs.forEach(img => {
+            img.addEventListener('click', function() {
+                imagen.src = img.src;
+                fullPage.style.display = 'flex';
+            });
+        });
+    </script>
+</body>
+</html>
